@@ -8,7 +8,6 @@ html {
   box-sizing: border-box;
 }
 
-
 html, body {
   -moz-osx-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
@@ -19,5 +18,6 @@ body {
   margin: 0;
   padding: 0;
   color: #222;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
