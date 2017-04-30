@@ -1,0 +1,11 @@
+.List {
+  border-bottom: 1px solid #ccc;
+}
+
+.List-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
