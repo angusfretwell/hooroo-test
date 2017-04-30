@@ -1,0 +1,24 @@
+.ListSort-label {
+  font-weight: bold;
+  color: #666;
+  padding-right: 1ch;
+  font-size: 0.875rem;
+}
+
+.ListSort-select {
+  appearance: none;
+  display: inline-block;
+  font-size: 0.875rem;
+  max-width: 100%;
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxNiAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R3JvdXA8L3RpdGxlPjxnIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTggMGw4IDhIMHpNOCAyMGwtOC04aDE2eiIvPjwvZz48L3N2Zz4=") no-repeat right 8px center;
+  background-size: 8px 10px;
+}
+
+.ListSort-select:focus {
+  outline: none;
+  border-color: #e00
+}
