@@ -1,0 +1,29 @@
+.Pricing {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.Pricing-label {
+  font-size: 0.625rem;
+  margin: 0;
+}
+.Pricing-price {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+.Pricing-discount {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: red;
+  font-weight: 600;
+}
+.Pricing-points {
+  margin: 0;
+  background: whitesmoke;
+  color: darkslategray;
+  font-size: 0.875rem;
+  padding: 0.125rem 0.25rem;
+}
