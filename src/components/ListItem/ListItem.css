@@ -1,0 +1,12 @@
+.ListItem {
+  border-top: 1px solid gainsboro;
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ListItem:hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
