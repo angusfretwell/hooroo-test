@@ -1,0 +1,33 @@
+.Thumbnail {
+  width: 145px;
+  position: relative;
+}
+
+.Thumbnail-callout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: paleturquoise;
+  text-transform: uppercase;
+  border-radius: 0 0 5px 0;
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+
+.Thumbnail-wrapper {
+  height: 0;
+  position: relative;
+  padding-bottom: 86%;
+}
+
+.Thumbnail-image {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
