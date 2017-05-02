@@ -1,0 +1,32 @@
+.Rating-item {
+  margin-right: 0.125rem;
+}
+
+.Rating-item-full {
+  color: goldenrod;
+}
+
+.Rating-item-empty {
+  color: gainsboro;
+}
+
+.Rating-item-half {
+  color: gainsboro;
+  position: relative;
+}
+
+.Rating-item-half:after{
+  color: goldenrod;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.Rating-item-half.fa-star:after {
+  content: "\F005";
+}
+
+.Rating-item-half.fa-circle:after {
+  content: "\F111";
+}
