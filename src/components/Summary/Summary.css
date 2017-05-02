@@ -1,0 +1,35 @@
+.Summary {
+  flex: 1;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Summary-title {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.Summary-address {
+  font-style: normal;
+  color: slategray;
+}
+
+.Summary-type {
+  margin: 0;
+}
+
+.Summary-cancellation {
+  color: seagreen;
+  margin: 0;
+}
+
+.Summary-cancellation-icon {
+  vertical-align: bottom;
+  height: 1rem;
+  width: 1rem;
+}
