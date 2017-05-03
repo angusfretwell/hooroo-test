@@ -3,18 +3,23 @@ import React from 'react';
 import Rating from '../Rating';
 import './Summary.css';
 
-export default () => (
+export default ({ title, address, type, cancellation, rating, selfRated }) => (
   <div className="Summary">
     <div>
-      <h2 className="Summary-title">Primus Hotel Sydney</h2>
-      <address className="Summary-address">339 Pitt St, Sydney</address>
+      <h2 className="Summary-title">
+        {title}
+      </h2>
+
+      <address className="Summary-address">
+        {address}
+      </address>
     </div>
 
-    <Rating rating={3} />
+    <Rating rating={rating} selfRated={selfRated} />
 
-    <p className="Summary-type">Deluxe king</p>
-    <p className="Summary-cancellation">
+    <p className="Summary-type">{type}</p>
+    {cancellation && <p className="Summary-cancellation">
       <i className="fa fa-check-square-o"></i> Free cancellation
-    </p>
+    </p>}
   </div>
 );

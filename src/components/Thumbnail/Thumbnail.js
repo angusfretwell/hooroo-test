@@ -2,14 +2,14 @@ import React from 'react';
 
 import './Thumbnail.css'
 
-export default () => (
+export default ({ image, promotion }) => (
   <div className="Thumbnail">
     <p className="Thumbnail-callout">
-      Exclusive Deal
+      {promotion}
     </p>
 
     <div className="Thumbnail-wrapper">
-      <img src="//placehold.it/145x125" className="Thumbnail-image" />
+      <img src={image} className="Thumbnail-image" alt="" />
     </div>
   </div>
 );
