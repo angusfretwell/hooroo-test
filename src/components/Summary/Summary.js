@@ -2,7 +2,6 @@ import React from 'react';
 
 import Rating from '../Rating';
 import './Summary.css';
-import tick from './tick.svg';
 
 export default () => (
   <div className="Summary">
