@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 import data from '../../data.json';
 import ListSummary from '../ListSummary';
 import ListSort from '../ListSort';
 import ListItem from '../ListItem';
+import * as sortMethods from './sortMethods';
 import './List.css'
 
 export default class List extends Component {
@@ -14,7 +16,10 @@ export default class List extends Component {
      sortFilters: {},
      location: '',
      hotels: [],
+     filterBy: ''
    };
+
+   this.setSortMethod = this.setSortMethod.bind(this);
  };
 
   componentDidMount() {
@@ -23,9 +28,14 @@ export default class List extends Component {
       this.setState({
         sortFilters: data.sort_filters,
         location: data.query.location,
-        hotels: data.hotels
+        hotels: data.hotels,
+        sortMethod: 'default'
       });
     }, 150);
+  }
+
+  setSortMethod(sortMethod) {
+    this.setState({ sortMethod: _.camelCase(sortMethod) });
   }
 
   render() {
@@ -39,10 +49,14 @@ export default class List extends Component {
       <div className="List">
         <div className="List-header">
           <ListSummary results={5} location={this.state.location} />
-          <ListSort sortFilters={this.state.sortFilters} />
+          <ListSort sortFilters={this.state.sortFilters} setSortMethod={this.setSortMethod} />
         </div>
 
-        {this.state.hotels.map((hotel, i) => <ListItem key={i} {...hotel} />)}
+        {_(this.state.hotels)
+          .sortBy(sortMethods[this.state.sortMethod])
+          .map((hotel, i) => <ListItem key={i} {...hotel} />)
+          .value()
+        }
       </div>
     );
   }
