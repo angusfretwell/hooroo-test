@@ -47,8 +47,15 @@ export default class List extends Component {
     return (
       <div className="List">
         <div className="List-header">
-          <ListSummary results={5} location={this.state.location} />
-          <ListSort sortFilters={this.state.sortFilters} setSortMethod={this.setSortMethod} />
+          <ListSummary
+            results={this.state.hotels.length}
+            location={this.state.location}
+          />
+
+          <ListSort
+            sortFilters={this.state.sortFilters}
+            setSortMethod={this.setSortMethod}
+          />
         </div>
 
         {_(this.state.hotels)
