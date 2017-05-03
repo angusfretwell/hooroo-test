@@ -2,26 +2,28 @@
   text-align: right;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .Pricing-label {
   font-size: 0.625rem;
   margin: 0;
 }
+
 .Pricing-price {
   margin-top: 0.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-size: 1.75rem;
 }
+
 .Pricing-discount {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   color: red;
   font-weight: 600;
 }
+
 .Pricing-points {
-  margin: 0;
+  margin-bottom: 0;
   background: whitesmoke;
   color: darkslategray;
   font-size: 0.875rem;
