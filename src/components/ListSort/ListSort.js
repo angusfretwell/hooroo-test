@@ -1,16 +1,16 @@
 import React from 'react';
+import _ from 'lodash';
 
 import './ListSort.css'
 
-export default () => (
+export default ({ sortFilters }) => (
   <form>
     <label className="ListSort-label">Sort by</label>
 
     <select className="ListSort-select">
-      <option>Top Deals</option>
-      <option>Price (high–low)</option>
-      <option>Price (low–high)</option>
-      <option>Name (A–Z)</option>
+      {_(sortFilters).mapValues((label, value, index) =>
+        <option value={value} key={value}>{label}</option>
+      ).toArray().value()}
     </select>
   </form>
 );

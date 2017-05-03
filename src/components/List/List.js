@@ -39,7 +39,7 @@ export default class List extends Component {
       <div className="List">
         <div className="List-header">
           <ListSummary results={5} location={this.state.location} />
-          <ListSort />
+          <ListSort sortFilters={this.state.sortFilters} />
         </div>
 
         {this.state.hotels.map((hotel, i) => <ListItem key={i} {...hotel} />)}
