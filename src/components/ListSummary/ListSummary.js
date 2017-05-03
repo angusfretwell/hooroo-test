@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ListSummary.css'
+import './ListSummary.css';
 
 export default ({ results, location }) => (
   <p className="ListSummary">

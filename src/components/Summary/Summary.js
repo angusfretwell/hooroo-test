@@ -19,7 +19,7 @@ export default ({ title, address, type, cancellation, rating, selfRated }) => (
 
     <p className="Summary-type">{type}</p>
     {cancellation && <p className="Summary-cancellation">
-      <i className="fa fa-check-square-o"></i> Free cancellation
+      <i className="fa fa-check-square-o" /> Free cancellation
     </p>}
   </div>
 );

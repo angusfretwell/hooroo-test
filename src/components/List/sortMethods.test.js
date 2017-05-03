@@ -1,43 +1,43 @@
 import _ from 'lodash';
 
+import { priceAsc, priceDesc, nameAsc, topDeals } from './sortMethods';
+
 const FIXTURES = [{
   title: 'Courtyard by Marriott Sydney-North Ryde',
   rooms: [{
     price: '$329',
     savings: '$30~',
     points_earned: '0',
-  }]
+  }],
 }, {
   title: 'Primus Hotel Sydney',
   rooms: [{
     price: '$375',
     savings: '$28',
     points_earned: '2250',
-  }]
+  }],
 }, {
   title: 'Rydges World Square Sydney',
   rooms: [{
     price: '$227',
     savings: '0',
     points_earned: '831',
-  }]
+  }],
 }, {
   title: 'PARKROYAL Darling Harbour Sydney',
   rooms: [{
     price: '$535',
     savings: '0',
     points_earned: '0',
-  }]
+  }],
 }, {
   title: 'Metro Hotel Marlow Sydney Central',
   rooms: [{
     price: '$295',
     savings: '0',
     points_earned: '1770',
-  }]
+  }],
 }];
-
-import { priceAsc, priceDesc, nameAsc, topDeals } from './sortMethods';
 
 describe('#priceAsc', () => {
   it('sorts by price (low-high)', () => {
@@ -70,7 +70,7 @@ describe('#nameAsc', () => {
       { title: 'Metro Hotel Marlow Sydney Central' },
       { title: 'PARKROYAL Darling Harbour Sydney' },
       { title: 'Primus Hotel Sydney' },
-      { title: 'Rydges World Square Sydney' }
+      { title: 'Rydges World Square Sydney' },
     ]);
   });
 });

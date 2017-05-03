@@ -28,7 +28,7 @@ describe('<Summary />', () => {
   it('renders <Rating /> with the correct props', () => {
     expect(shallow(<Summary rating={5} selfRated />).find(Rating).props()).toEqual({
       rating: 5,
-      selfRated: true
+      selfRated: true,
     });
   });
 });

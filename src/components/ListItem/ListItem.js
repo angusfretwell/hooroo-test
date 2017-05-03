@@ -4,7 +4,7 @@ import _ from 'lodash';
 import Thumbnail from '../Thumbnail';
 import Summary from '../Summary';
 import Pricing from '../Pricing';
-import './ListItem.css'
+import './ListItem.css';
 
 const SELF_RATING_TYPE = 'self';
 
@@ -15,7 +15,7 @@ export default ({
   rating,
   rating_type,
   title,
-  rooms
+  rooms,
 }) => {
   const {
     free_cancellation,
@@ -23,7 +23,7 @@ export default ({
     currency,
     points_earned,
     price,
-    savings
+    savings,
   } = _.first(rooms);
 
   return (
@@ -50,4 +50,4 @@ export default ({
       />
     </div>
   );
-}
+};

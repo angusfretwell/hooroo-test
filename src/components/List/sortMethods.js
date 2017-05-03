@@ -9,7 +9,7 @@ export const priceDesc = hotel => getPrice(hotel) * -1;
 export const nameAsc = 'title';
 export const topDeals = [
   hotel => -parsePrice(getRoom(hotel).savings),
-  hotel => getRoom(hotel).points_earned * -1
+  hotel => getRoom(hotel).points_earned * -1,
 ];
 
 export default topDeals;

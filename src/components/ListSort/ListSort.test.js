@@ -7,7 +7,7 @@ const FILTERS = {
   'top-deals': 'Top Deals',
   'price-desc': 'Price (high-low)',
   'price-asc': 'Price (low-high)',
-  'name-asc': 'Name (A-Z)'
+  'name-asc': 'Name (A-Z)',
 };
 
 const setSortMethod = jest.fn();
@@ -22,9 +22,9 @@ describe('<ListSort />', () => {
 
   it('calls setSortMethod when the select changes', () => {
     const select = shallow(
-      <ListSort sortFilters={FILTERS} setSortMethod={setSortMethod} />
+      <ListSort sortFilters={FILTERS} setSortMethod={setSortMethod} />,
     ).find('select');
-    select.simulate('change', { target: { value: 'top-deals' }});
+    select.simulate('change', { target: { value: 'top-deals' } });
     expect(setSortMethod).toHaveBeenCalledWith('top-deals');
   });
 });

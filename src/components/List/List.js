@@ -6,21 +6,21 @@ import ListSummary from '../ListSummary';
 import ListSort from '../ListSort';
 import ListItem from '../ListItem';
 import * as sortMethods from './sortMethods';
-import './List.css'
+import './List.css';
 
 export default class List extends Component {
   constructor() {
-   super();
+    super();
 
-   this.state = {
-     sortFilters: {},
-     location: '',
-     hotels: [],
-     sortMethod: 'default'
-   };
+    this.state = {
+      sortFilters: {},
+      location: '',
+      hotels: [],
+      sortMethod: 'default',
+    };
 
-   this.setSortMethod = this.setSortMethod.bind(this);
- };
+    this.setSortMethod = this.setSortMethod.bind(this);
+  }
 
   componentDidMount() {
     // NOTE: simulate fetching data asynchronously from an API
@@ -28,7 +28,7 @@ export default class List extends Component {
       this.setState({
         sortFilters: data.sort_filters,
         location: data.query.location,
-        hotels: data.hotels
+        hotels: data.hotels,
       });
     }, 150);
   }
@@ -41,7 +41,7 @@ export default class List extends Component {
     if (!this.state.hotels.length) {
       return (
         <p className="Loading">Loading...</p>
-      )
+      );
     }
 
     return (

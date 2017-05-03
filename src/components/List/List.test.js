@@ -27,7 +27,7 @@ describe('<List />', () => {
       wrapper.setState({ location: 'Melbourne', hotels: data.hotels });
       expect(wrapper.find(ListSummary).props()).toEqual({
         location: 'Melbourne',
-        results: 5
+        results: 5,
       });
     });
 
@@ -36,14 +36,14 @@ describe('<List />', () => {
       wrapper.setState({ sortFilters: data.sort_filters, hotels: data.hotels });
       expect(wrapper.find(ListSort).props()).toEqual({
         setSortMethod: wrapper.instance().setSortMethod,
-        sortFilters: data.sort_filters
+        sortFilters: data.sort_filters,
       });
     });
 
     it('renders a <ListItem /> for each hotel', () => {
       const wrapper = shallow(<List />);
-      wrapper.setState({ location: 'Melbourne', hotels: data.hotels })
+      wrapper.setState({ location: 'Melbourne', hotels: data.hotels });
       expect(wrapper.find(ListItem).length).toBe(5);
     });
-  })
+  });
 });

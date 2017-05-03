@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Thumbnail.css'
+import './Thumbnail.css';
 
 export default ({ image, promotion }) => (
   <div className="Thumbnail">

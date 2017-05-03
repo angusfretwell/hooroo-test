@@ -4,10 +4,10 @@ import _ from 'lodash';
 import './Rating.css';
 
 const className = (rating, index) => {
-  if (index < rating - .5) return 'Rating-item-full';
+  if (index < rating - 0.5) return 'Rating-item-full';
   if (index < rating) return 'Rating-item-half';
   return 'Rating-item-empty';
-}
+};
 
 const ratings = (rating, selfRated) => _.range(5).map(index =>
   <span
@@ -16,7 +16,7 @@ const ratings = (rating, selfRated) => _.range(5).map(index =>
       Rating-item ${className(rating, index)}
       fa fa-${selfRated ? 'circle' : 'star'}
     `}
-  />
+  />,
 );
 
 export default ({ rating, selfRated }) => (

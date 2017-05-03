@@ -1,1 +1,1 @@
-export { default } from './ListSort'
+export { default } from './ListSort';
