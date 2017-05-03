@@ -16,7 +16,7 @@ export default class List extends Component {
      sortFilters: {},
      location: '',
      hotels: [],
-     filterBy: ''
+     sortMethod: 'default'
    };
 
    this.setSortMethod = this.setSortMethod.bind(this);
@@ -28,8 +28,7 @@ export default class List extends Component {
       this.setState({
         sortFilters: data.sort_filters,
         location: data.query.location,
-        hotels: data.hotels,
-        sortMethod: 'default'
+        hotels: data.hotels
       });
     }, 150);
   }
