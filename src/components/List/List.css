@@ -8,3 +8,8 @@
   justify-content: space-between;
   padding-bottom: 0.5rem;
 }
+
+.Loading {
+  color: slategray;
+  font-size: 0.875rem;
+}

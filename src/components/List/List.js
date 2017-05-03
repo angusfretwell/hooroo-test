@@ -1,17 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+import data from '../../data.json';
 import ListSummary from '../ListSummary';
 import ListSort from '../ListSort';
 import ListItem from '../ListItem';
 import './List.css'
 
-export default () => (
-  <div className="List">
-    <div className="List-header">
-      <ListSummary results={5} location="Sydney" />
-      <ListSort />
-    </div>
+export default class List extends Component {
+  constructor() {
+   super();
 
-    {[...Array(5).keys()].map(i => <ListItem key={i} />)}
-  </div>
-);
+   this.state = {
+     sortFilters: {},
+     location: '',
+     hotels: [],
+   };
+ };
+
+  componentDidMount() {
+    // NOTE: simulate fetching data asynchronously from an API
+    setTimeout(() => {
+      this.setState({
+        sortFilters: data.sort_filters,
+        location: data.query.location,
+        hotels: data.hotels
+      });
+    }, 150);
+  }
+
+  render() {
+    return (
+      <div className="List">
+        <div className="List-header">
+          <ListSummary results={5} location={this.state.location} />
+          <ListSort />
+        </div>
+
+        {this.state.hotels.map((hotel, i) => <ListItem key={i} {...hotel} />)}
+      </div>
+    );
+  }
+}
