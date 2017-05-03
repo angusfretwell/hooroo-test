@@ -1,6 +1,7 @@
 .Thumbnail {
   width: 145px;
   position: relative;
+  background-color: gainsboro;
 }
 
 .Thumbnail-callout {
