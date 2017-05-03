@@ -29,6 +29,12 @@ export default class List extends Component {
   }
 
   render() {
+    if (!this.state.hotels.length) {
+      return (
+        <p className="Loading">Loading...</p>
+      )
+    }
+
     return (
       <div className="List">
         <div className="List-header">
