@@ -7,6 +7,6 @@
 }
 
 .ListItem:hover {
-  background: whitesmoke;
+  background-color: whitesmoke;
   cursor: pointer;
 }
