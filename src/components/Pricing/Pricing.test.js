@@ -20,7 +20,7 @@ describe('<Pricing />', () => {
   });
 
   it('renders the points', () => {
-    expect(shallow(<Pricing points="100" />).text()).toMatch('Earn 100 Quantas points');
+    expect(shallow(<Pricing points="100" />).text()).toMatch('Earn 100 Qantas points');
     expect(shallow(<Pricing points="0" />).text()).not.toMatch('Qantas points');
   });
 });
