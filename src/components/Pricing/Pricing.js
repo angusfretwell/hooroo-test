@@ -17,7 +17,7 @@ export default ({ price, points, savings, currency }) => (
     {notZero(savings) && <p className="Pricing-discount">Save {savings}</p>}
 
     {notZero(points) && <p className="Pricing-points">
-      Earn <strong>{points}</strong> Quantas points
+      Earn <strong>{points}</strong> Qantas points
     </p>}
   </div>
 );
