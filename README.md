@@ -10,9 +10,9 @@ http://hooroo-test.herokuapp.com
 
 2. Install and use the node version specified in `.nvmrc`:
 
-	```shell
-	$ nvm install && nvm use
-	```
+  ```shell
+  $ nvm install && nvm use
+  ```
 
 3. Install Yarn:
 
